@@ -4,6 +4,12 @@
     overflow-X: hidden;
 }
 
+.sidenav{
+    height: 100%;
+    position: fixed !important;
+    width: 240px;
+}
+
 #sidenav-main{
     position: fixed;
     left: -300px;
@@ -43,6 +49,10 @@
         margin-left: 0px !important;
 
     } 
+
+    .scrollbar-inner{
+        width: 100%;
+    }
 
 } 
 

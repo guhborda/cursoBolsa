@@ -1,13 +1,15 @@
 <?php
 
 include 'template/sidenav.php';
-include 'template/topnav.php';
-
 ?>
 
 <div class="main-content" id="panel">
     <!-- Topnav -->
+    <?php
     
+    include 'template/topnav.php';
+    
+    ?>
     <!-- Header -->
     <!-- Header -->
     <div class="header pb-6 d-flex align-items-center" style="min-height: 500px; background-image: url(../assets/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">
