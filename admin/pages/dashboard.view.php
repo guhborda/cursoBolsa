@@ -140,10 +140,22 @@ include 'template/sidenav.php';
         <!-- teammembers -->
         <!-- todolist -->
         <!-- progress track -->
+        <?php
+          include 'components/teammembers.php';
+          
+          include 'components/todolist.php';
+          include 'components/progresstrack.php';
+
+        ?>
       </div>
       <div class="row">
        <!-- activity feed -->
         <!-- light table -->
+        <?php
+          include 'components/lighttable.php';
+        
+
+        ?>
       </div>
       <div class="row">
         <!-- pagevisits -->
