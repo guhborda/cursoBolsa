@@ -12,8 +12,13 @@
 
           <div class="row justify-content-center">
             <div class="col-xl-5 col-lg-6 col-md-8 px-5">
-              <h1 class="text-white">Welcome!</h1>
-              <p class="text-lead text-white">Use these awesome forms to login or create new account in your project for free.</p>
+              <h1 class="text-white">Pré-Registro</h1>
+              <p class="text-lead text-white">Demonstre seu interesse no curso</p>
+              <p class="text-lead text-white">Faça seu Pré-Registro AGORA</p>
+              <span class="text-white">e saiba com antecedência o dia de abertura da inscriçãoas vagas são limitadas!</span>  
+
+
+
             </div>
           </div>
         </div>
@@ -33,11 +38,7 @@
               <div class="text-muted text-center mt-2 mb-3"><small>Sign in with</small></div>
               <div class="btn-wrapper text-center">
                 <a href="#" class="btn btn-neutral btn-icon">
-                  <span class="btn-inner--icon"><img src="../../assets/img/icons/common/github.svg"></span>
-                  <span class="btn-inner--text">Github</span>
-                </a>
-                <a href="#" class="btn btn-neutral btn-icon">
-                  <span class="btn-inner--icon"><img src="../../assets/img/icons/common/google.svg"></span>
+                  <span class="btn-inner--icon"><i class="fab fa-google"></i></span>
                   <span class="btn-inner--text">Google</span>
                 </a>
               </div>
@@ -101,8 +102,9 @@
     /* background-image: url('https://www.btgpactualdigital.com/wp-content/uploads/2018/08/technical-financial-graph-on-technology-abstract-background-picture-id926051128.jpg') !important; */
     /* background-repeat: no-repeat !important; */
     width: 100% !important;
-    height: 80% !important;
-    filter: blur(7px) !important;
+    height: 100% !important;
+    opacity: 0.3;
+    filter: blur(2px) !important;
 }
 
 </style>

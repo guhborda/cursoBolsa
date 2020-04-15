@@ -1633,3 +1633,19 @@
       </footer>
     </div>
   </div>
+
+
+
+  <script>
+  $(document).ready(function(){
+    
+    $('.nav-item a.nav-link').on('click',function(e){
+        console.log($(this).parent());
+
+        $(this).parent().toggleClass("show");
+        $(this).next().toggleClass("show");
+        
+
+    });
+
+});</script>
