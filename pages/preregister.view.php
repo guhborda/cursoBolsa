@@ -1,7 +1,7 @@
 <?php
     //include 'structure/navbar.php';
   ?>
-<div class="main-content bg-default">
+<div class="main-content bg-default" page="preregister">
     <!-- Header -->
     <div class="header bg-default py-7 py-lg-8 pt-lg-9" style="padding-top: 50px !important;">
     <img class="imgHeader" src="https://www.btgpactualdigital.com/wp-content/uploads/2018/08/technical-financial-graph-on-technology-abstract-background-picture-id926051128.jpg" alt="">

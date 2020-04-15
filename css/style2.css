@@ -42,7 +42,9 @@
     margin-left: 0 !important;
 }
 
-
+.main-content[page='preregister']{
+    margin-left: 0 !important;
+}
 
 .scrollbar-inner{
     width: 100%;
