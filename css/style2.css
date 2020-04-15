@@ -4,33 +4,33 @@
     overflow-X: hidden;
 }
 
-.header{
+.main-content[id='panel'] .header{
     z-index: -1;
     padding-top: 80px;
     margin-top: -80px;
 }
 
-.main-content[page='preregister'] .header{
+.header{
     z-index: 0;
     margin-top: 0px;
 }
 
 
-#sidenav-main.show ~ .sidenav-toggler{
+ #sidenav-main.show ~ .sidenav-toggler{
     position: absolute;
     top: 50px;
     left: 327px;
     z-index: 999;
 }
 
-.btnsidenav.show{
+ .btnsidenav.show{
     position: absolute;
     top: 50px;
     left: 327px;
     z-index: 999;
 }
 
-.btnsidenav.show ~ .btnsidenav .sidenav-toggler-inner{
+ .btnsidenav.show ~ .btnsidenav .sidenav-toggler-inner{
     position: absolute;
     top: 50%;
     left: 34%;
@@ -42,12 +42,7 @@
     position: fixed !important;
     width: 240px;
 }
-
-.main-content[page='preregister']{
-    margin-left: 0 !important;
-}
-
-.scrollbar-inner{
+ .scrollbar-inner{
     width: 100%;
 }
 
@@ -61,11 +56,11 @@
     margin-left: 0px;
 }
 
-.main-content{
+.main-content[id='panel']{
     margin-left: 0;
 }
 
-.sidenav.show ~ .main-content{
+.sidenav.show ~ .main-content[id='panel']{
     margin-left: 240px ;
 }
 
@@ -80,7 +75,7 @@
     .sidenav{
         margin-left: -0px;
     }
-    .main-content{
+    .main-content[id='panel']{
         margin-left: 240px;
     }
 
@@ -88,7 +83,7 @@
         margin-left: -280px;
     }
 
-    .sidenav.show ~ .main-content{
+    .sidenav.show ~ .main-content[id='panel']{
         margin-left: 0px ;
     }
 
