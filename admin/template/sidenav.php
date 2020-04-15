@@ -14,15 +14,15 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="dashboard.html">
+              <a class="nav-link" href="dashboard">
                 <i class="ni ni-tv-2 text-primary"></i>
                 <span class="nav-link-text">Dashboard</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="icons.html">
+              <a class="nav-link" href="profile">
                 <i class="ni ni-planet text-orange"></i>
-                <span class="nav-link-text">Icons</span>
+                <span class="nav-link-text">Profile</span>
               </a>
             </li>
             <li class="nav-item">
@@ -105,3 +105,12 @@
       </div>
     </div>
   </nav>
+
+  <script>
+
+    $(document).ready(function(){
+      var currentpage = $('.main-content').attr('page');
+      console.log(currentpage);
+    });
+   
+  </script>

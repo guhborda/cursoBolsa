@@ -1,7 +1,7 @@
-<div class="col-xl-7">
+<div class="col-xl-12">
           <div class="row">
             <div class="col">
-              <div class="card">
+              <div class="card" id="table">
                 <!-- Card header -->
                 <div class="card-header border-0">
                   <h3 class="mb-0">Light table</h3>
@@ -143,7 +143,7 @@
         </div>
         
         <script>
-          $(".dropdown-menu a.dropdown-item").click(function(e){
+          $("#table .dropdown-menu a.dropdown-item").click(function(e){
             e.preventDefault();
             alert('clicando');
           });

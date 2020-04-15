@@ -238,11 +238,11 @@
                 <div class="dropdown-header noti-title">
                   <h6 class="text-overflow m-0">Welcome!</h6>
                 </div>
-                <a href="#!" class="dropdown-item">
+                <a href="profile" class="dropdown-item">
                   <i class="ni ni-single-02"></i>
                   <span>My profile</span>
                 </a>
-                <a href="#!" class="dropdown-item">
+                <a href="" class="dropdown-item">
                   <i class="ni ni-settings-gear-65"></i>
                   <span>Settings</span>
                 </a>

@@ -4,7 +4,7 @@ include 'template/sidenav.php';
 
 
 ?>
-<div class="main-content" id="panel">
+<div class="main-content" id="panel" page="dashboard">
   <?php
   
   include 'template/topnav.php';

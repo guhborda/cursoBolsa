@@ -3,7 +3,7 @@
 include 'template/sidenav.php';
 ?>
 
-<div class="main-content" id="panel">
+<div class="main-content" id="panel" page="profile">
     <!-- Topnav -->
     <?php
     
