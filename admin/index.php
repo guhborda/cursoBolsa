@@ -8,6 +8,7 @@ if($_REQUEST){
     if(count($url) > 1){
         include 'pages/404.view.php';
     }else{
+        
         include 'pages/'.$_REQUEST['url'].'.view.php';
     }
     
