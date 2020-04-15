@@ -1,3 +1,10 @@
+<?php
+
+include 'template/sidenav.php';
+include 'template/topnav.php';
+
+?>
+
 <div class="main-content" id="panel">
     <!-- Topnav -->
     

@@ -8,7 +8,6 @@ if($_REQUEST){
     if(count($url) > 1){
         include 'pages/404.view.php';
     }else{
-        include 'template/sidenav.php';
         include 'pages/'.$_REQUEST['url'].'.view.php';
     }
     
@@ -19,15 +18,13 @@ if($_REQUEST){
 ?>
 
 <script>
+$('.sidenav-toggler').on('click',function(e){
+        e.preventDefault();
+        alert('haha');
 
+        $('#sidenav-main').toggleClass('show');
 
-
-    
-
-    
-
-
-
+    });
 </script>
 </body>
 </html>

@@ -1,10 +1,10 @@
+<?php
+
+include 'template/sidenav.php';
+include 'template/topnav.php';
+
+?>
 <div class="main-content" id="panel">
-
-      <?php
-
-        include 'template/topnav.php';
-      
-      ?>
     <!-- Header -->
     <!-- Header -->
     <div class="header bg-primary pb-6">
