@@ -20,7 +20,7 @@ if($_REQUEST){
 <script>
 $('.sidenav-toggler').on('click',function(e){
         e.preventDefault();
-        alert('haha');
+        
 
         $('#sidenav-main').toggleClass('show');
 
