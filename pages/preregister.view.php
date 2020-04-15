@@ -43,7 +43,7 @@
                 <div class="form-group mb-3">
                   <div class="input-group input-group-merge input-group-alternative">
                     <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                      <span class="input-group-text"><i class="fas fa-signature"></i></span>
                     </div>
                     <input class="form-control" placeholder="Nome e Sobrenome" type="text" id="nome">
                   </div>
@@ -51,7 +51,7 @@
                 <div class="form-group">
                   <div class="input-group input-group-merge input-group-alternative">
                     <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                      <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                     </div>
                     <input class="form-control" placeholder="E-mail" type="email" id="email">
                   </div>
