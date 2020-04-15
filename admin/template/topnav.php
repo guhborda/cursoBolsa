@@ -26,7 +26,7 @@
           </form>
           <!-- Navbar links -->
           <ul class="navbar-nav align-items-center  ml-md-auto ">
-            <li class="nav-item d-sm-none">
+            <li class="nav-item d-sm-none dropdown">
               <a class="nav-link" href="#" data-action="search-show" data-target="#navbar-search-main" id="showNav">
                 <i class="ni ni-zoom-split-in"></i>
               </a>
@@ -279,10 +279,21 @@
 
     });
 
-    $('.sidenav-toggle').on('click',function(e){
-        e.preventDefault()
+
+    $('.dropdown a.nav-link#showNav').on('click',function(e){
+      e.preventDefault();
+        console.log($(this).parent());
+
+        $(this).parent().toggleClass("show");
+        $(this).closest().toggleClass("show");
         
 
     });
+
+    // $('.sidenav-toggle').on('click',function(e){
+    //     e.preventDefault()
+        
+
+    // });
 
 });</script>
