@@ -103,3 +103,12 @@
       </div>
     </div><div class="scroll-element scroll-x scroll-scrolly_visible"><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar" style="width: 0px;"></div></div></div><div class="scroll-element scroll-y scroll-scrolly_visible"><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar" style="height: 413px; top: 0px;"></div></div></div></div>
   </nav>
+  <script>
+  
+
+  $('.sidenav-toggler').click(function(){
+
+      
+
+  });
+  </script>
