@@ -1,7 +1,7 @@
 <?php
     //include 'structure/navbar.php';
   ?>
-<div class="main-content bg-default" page="preregister">
+<div class="main-content bg-default" page="preregister" style="margin-left:0;">
     <!-- Header -->
     <div class="header bg-default py-7 py-lg-8 pt-lg-9" style="padding-top: 50px !important;">
     <img class="imgHeader" src="https://www.btgpactualdigital.com/wp-content/uploads/2018/08/technical-financial-graph-on-technology-abstract-background-picture-id926051128.jpg" alt="">
@@ -93,7 +93,31 @@
 <?php
 include 'structure/footer.php';
 ?>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 <script>
 $('#preregister').submit(function(e){
         e.preventDefault();
@@ -101,17 +125,43 @@ $('#preregister').submit(function(e){
         var nome = $('#nome').val();
         var email = $('#email').val();
 
-        $.ajax({
+
+        $.get('https://gustavoborda.com',{
           url: 'functions/inscrever.php',
           dataType:'JSON',
           method: "POST",
           data: {data:{nome,email}},
           beforeSend: function(){
-            
+            console.log('sending');
           },
           success: function(response){
-            console.log('going to success');
-          }
-        });
+            if(response == true){
+                console.log('cadastrado com Sucesso');
+            }else{
+
+              
+
+              console.log(response);
+            }
+          });
+        // $.ajax('https://gustavoborda.com',{
+        //   url: 'functions/inscrever.php',
+        //   dataType:'JSON',
+        //   method: "POST",
+        //   data: {data:{nome,email}},
+        //   beforeSend: function(){
+        //     console.log('sending');
+        //   },
+        //   success: function(response){
+        //     if(response == true){
+        //         console.log('cadastrado com Sucesso');
+        //     }else{
+
+              
+
+        //       console.log(response);
+        //     }
+        //   }
+        
     }); 
 </script>

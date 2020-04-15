@@ -27,5 +27,8 @@ $('.sidenav-toggler').on('click',function(e){
 
     });
 </script>
+<?php
+    include 'structure/footer.php';
+?>
 </body>
 </html>

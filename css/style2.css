@@ -4,6 +4,13 @@
     overflow-X: hidden;
 }
 
+.header{
+    z-index: -1;
+    padding-top: 80px;
+    margin-top: -80px;
+}
+
+
 #sidenav-main.show ~ .sidenav-toggler{
     position: absolute;
     top: 50px;

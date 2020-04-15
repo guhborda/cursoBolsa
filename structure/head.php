@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gustavo Borda</title>
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="js/popper.min.js">
     <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.css">
@@ -18,8 +19,8 @@
     <link rel="stylesheet" href="js/popper.min.js">
     <link rel="stylesheet" href="assets/vendor/bootstrap/dist/js/bootstrap.min.css">
     <link rel="stylesheet" href="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.css">
-
-
+    <meta name="theme-color" content="#2196f3" />
+    <link rel="shortcut icon" href="images/icons/icon-72x72.png" type="image/x-icon">
     <script src="js/plugins/moment.js"></script>
     <script src="js/plugins/fullcalendar.js"></script>
     <script src="js/plugins/cookie.js"></script>
@@ -30,7 +31,7 @@
     <script src="js/plugins/demo.js"></script>
 
 </head>
-<body class="bg-default " style="height: 100% !important;
+<body class="bg-default " style="height: 800px !important;
     width: 100% !important;">
 
 
