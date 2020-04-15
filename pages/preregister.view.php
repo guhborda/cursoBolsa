@@ -1,9 +1,9 @@
 <?php
-    include 'structure/navbar.php';
+    //include 'structure/navbar.php';
   ?>
 <div class="main-content bg-default">
     <!-- Header -->
-    <div class="header bg-default py-7 py-lg-8 pt-lg-9">
+    <div class="header bg-default py-7 py-lg-8 pt-lg-9" style="padding-top: 50px !important;">
     <img class="imgHeader" src="https://www.btgpactualdigital.com/wp-content/uploads/2018/08/technical-financial-graph-on-technology-abstract-background-picture-id926051128.jpg" alt="">
 
       <div class="container">
@@ -34,26 +34,18 @@
       <div class="row justify-content-center">
         <div class="col-lg-5 col-md-7">
           <div class="card bg-secondary border-0 mb-0">
-            <div class="card-header bg-transparent pb-5">
-              <div class="text-muted text-center mt-2 mb-3"><small>Sign in with</small></div>
-              <div class="btn-wrapper text-center">
-                <a href="#" class="btn btn-neutral btn-icon">
-                  <span class="btn-inner--icon"><i class="fab fa-google"></i></span>
-                  <span class="btn-inner--text">Google</span>
-                </a>
-              </div>
+            <div class="card-header bg-transparent pb-2">
+              <div class="text-muted text-center mt-2 mb-3" style="font-size: 20px;">Pré-Registro</div>
             </div>
             <div class="card-body px-lg-5 py-lg-5">
-              <div class="text-center text-muted mb-4">
-                <small>Or sign in with credentials</small>
-              </div>
-              <form role="form">
+              
+              <form id="preregister">
                 <div class="form-group mb-3">
                   <div class="input-group input-group-merge input-group-alternative">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Email" type="email">
+                    <input class="form-control" placeholder="Nome e Sobrenome" type="text" id="nome">
                   </div>
                 </div>
                 <div class="form-group">
@@ -61,28 +53,18 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Password" type="password">
+                    <input class="form-control" placeholder="E-mail" type="email" id="email">
                   </div>
                 </div>
-                <div class="custom-control custom-control-alternative custom-checkbox">
-                  <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
-                  <label class="custom-control-label" for=" customCheckLogin">
-                    <span class="text-muted">Remember me</span>
-                  </label>
-                </div>
+                
                 <div class="text-center">
-                  <button type="button" class="btn btn-primary my-4">Sign in</button>
+                  <input type="submit" class="btn btn-primary my-4" id="btnRegister" value="Registro"></button>
                 </div>
               </form>
             </div>
           </div>
           <div class="row mt-3">
-            <div class="col-6">
-              <a href="#" class="text-light"><small>Forgot password?</small></a>
-            </div>
-            <div class="col-6 text-right">
-              <a href="#" class="text-light"><small>Create new account</small></a>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -108,3 +90,28 @@
 }
 
 </style>
+<?php
+include 'structure/footer.php';
+?>
+
+<script>
+$('#preregister').submit(function(e){
+        e.preventDefault();
+
+        var nome = $('#nome').val();
+        var email = $('#email').val();
+
+        $.ajax({
+          url: 'functions/inscrever.php',
+          dataType:'JSON',
+          method: "POST",
+          data: {data:{nome,email}},
+          beforeSend: function(){
+            
+          },
+          success: function(response){
+            console.log('going to success');
+          }
+        });
+    }); 
+</script>

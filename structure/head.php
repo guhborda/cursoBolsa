@@ -24,7 +24,8 @@
     <script src="js/plugins/demo.js"></script>
 
 </head>
-<body class="bg-grey">
+<body class="bg-default " style="height: 100% !important;
+    width: 100% !important;">
 
 
 
