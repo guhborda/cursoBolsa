@@ -1,7 +1,7 @@
 <?php
 
 include '../../config.php';
-if(!$auth){
+if($auth == false){
 ?>
 <container class="login_form">
 <form class="login__form" id="login-form" name="frm_login" action="">

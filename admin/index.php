@@ -21,14 +21,19 @@ include ('structure/head.php');
             // var_dump($url);
              if(isset($url[0]) && !empty($url[0])){
               // var_dump('existe url3 url='.$url[0]);
+                
+              
                 if($auth){  
-              echo "<script>$('.master_section').empty();
+                echo "<script>$('.master_section').empty();
                     $('.master_section').load('view/$url[0].view.php'); 
                 </script>";
                 }else{
+
                     echo "<script>$('.master_section').empty();
                     $('.master_section').load('view/login.view.php'); 
                 </script>";
+
+
                 }
             }else{
               if($auth){
@@ -47,13 +52,9 @@ include ('structure/head.php');
               </script>";
               }
             }
-            if(isset($url[1]) && !empty($url[1])){
+            if($url[0] == 'sair' ){
                 
-                
-                //  echo "
-                //  <script>
-                //  $('.master_section').load('view/$url[0].view.php');  
-                //  </script>";
+                require_once '../functions/Sair.func.php';
               
             }
               

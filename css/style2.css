@@ -5,9 +5,13 @@
 }
 
 .main-content[id='panel'] .header{
-    z-index: -1;
+    z-index: 0;
     padding-top: 80px;
     margin-top: -80px;
+}
+
+.main-content[id='panel'] .navbar-top{
+  z-index: 1;
 }
 
 .header{
