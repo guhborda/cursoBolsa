@@ -1,8 +1,4 @@
-<?php
 
-if($auth){
-
-?>
 <!-- Sidenav -->
 <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
     <div class="scrollbar-inner">
@@ -18,19 +14,19 @@ if($auth){
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" onclick="history.pushState(null,'$url[0]','dashboard'); return false;" href="dashboard">
+              <a class="nav-link"  href="dashboard">
                 <i class="ni ni-tv-2 text-primary"></i>
                 <span class="nav-link-text">Dashboard</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="history.pushState(null,'$url[0]','profile'); return false;" href="profile">
+              <a class="nav-link"  href="profile">
                 <i class="ni ni-planet text-orange"></i>
                 <span class="nav-link-text">Profile</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="history.pushState(null,'$url[0]','Sair'); return false;" href="Sair">
+              <a class="nav-link" href="Sair">
                 <i class="ni ni-pin-3 text-primary"></i>
                 <span class="nav-link-text">Google</span>
               </a>
@@ -118,10 +114,3 @@ if($auth){
     });
    
   </script>
-<?php
-
-  }else{
-    return 0;
-  }
-
-?>

@@ -1,6 +1,6 @@
 <?php  
 namespace functions;
-include '../../config.php';
+include '../config.php';
 include $path.'autoload.php';
 
 use model\User;

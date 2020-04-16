@@ -1,4 +1,4 @@
-<!-- Topnav -->
+
 
     <nav class="navbar navbar-top navbar-expand navbar-dark bg-transparent border-bottom">
       <div class="container-fluid">
@@ -290,10 +290,11 @@
 
     });
 
-    // $('.sidenav-toggle').on('click',function(e){
-    //     e.preventDefault()
+    $('.sidenav-toggle').on('click',function(e){
+        e.preventDefault()
         
 
-    // });
+    });
 
 });</script>
+

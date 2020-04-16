@@ -16,7 +16,7 @@ include ('structure/head.php');
             $url= $_GET['url'];
             
             $url= explode('/',$url);
-            print_r($url);
+            // print_r($url);
             // var_dump($url);
             // var_dump($url);
              if(isset($url[0]) && !empty($url[0])){
@@ -52,7 +52,7 @@ include ('structure/head.php');
               </script>";
               }
             }
-            if($url[0] == 'sair' ){
+            if($url[0] == 'sair' || $url[0] == 'Sair' ){
                 
                 require_once '../functions/Sair.func.php';
               

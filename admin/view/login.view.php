@@ -55,7 +55,7 @@ e.preventDefault();
 				sleep(1700).then(()=>{
 				$.ajax({
 					 	method:'POST',
-					  	url:'./functions/Login.func.php',
+					  	url:'../functions/Login.func.php',
 					  	dataType:'JSON',
 					 	data:{ 
 					 		username: username,

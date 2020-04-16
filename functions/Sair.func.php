@@ -6,6 +6,6 @@ if(isset($_SESSION['user'])){
 }else{
     $response = array('Mensagem' => "Conexao não existente",'Status' => "Desconectado",'Error' => "Necessário Logar primeiro");
 }
-echo json_encode($response);
+return $response;
 
 ?>
