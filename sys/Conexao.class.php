@@ -1,13 +1,12 @@
 <?php 
 namespace sys;
 define('HOST','localhost');
-define('DBNAME','u304196802_preregistro');
-define('DBUSER','u304196802_mentoria');
-define('DBPASS','Xmsoltqdf31');
+define('DBNAME','testes');
+define('DBUSER','root');
+define('DBPASS','');
 define('DBTYPE','mysql');
-/**
-* 
-*/
+
+
 class Conexao{
 	
 	private $pdo;
