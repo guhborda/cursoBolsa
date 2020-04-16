@@ -101,8 +101,8 @@ $('#preregister').submit(function(e){
         var nome = $('#nome').val();
         var email = $('#email').val();
         if( (nome != '') || (email != '')){
-          $.ajax('https://gustavoborda.com',{
-          url: 'functions/inscrever.php',
+          $.ajax({
+          url: 'api/Preregistro/cadastrar',
           dataType:'JSON',
           method: "POST",
           data: {data:{nome,email}},
@@ -110,15 +110,12 @@ $('#preregister').submit(function(e){
             console.log('sending');
           },
           success: function(response){
-            if(response == true){
-                console.log('cadastrado com Sucesso');
-            }else{
-
-              
-
-              console.log(response);
-            }
-          }
+                      if(response.dados == true){
+                          console.log('cadastrado com Sucesso');
+                      }else{
+                        console.log(response);
+                      }
+                  }
           });
         }else{
 

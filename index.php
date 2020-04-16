@@ -25,6 +25,6 @@ if($_REQUEST){
 
     <script src="sw.js"></script>
 
-<script></script>
+
 </body>
 </html>
