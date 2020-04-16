@@ -22,7 +22,7 @@
     <meta name="theme-color" content="#2196f3" />
     <link rel="shortcut icon" href="images/icons/icon-72x72.png" type="image/x-icon">
     <script src="js/popper.min.js"></script>
-    
+    <script src="js/bootstrap.js"></script>
     <script src="js/plugins/moment.js"></script>
     <script src="js/plugins/fullcalendar.js"></script>
     <script src="js/plugins/cookie.js"></script>

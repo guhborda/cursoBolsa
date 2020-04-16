@@ -23,7 +23,7 @@
   <!-- Navbar -->
 
   <!-- Full Page Intro -->
-  <div class="view">
+  <div class="view" style="height:100vh">
 
     <video class="video-intro" poster="https://mdbootstrap.com/img/Photos/Others/background.jpg" playsinline autoplay muted loop>
       <source src="https://mdbootstrap.com/img/video/Lines-min.mp4" type="video/mp4">

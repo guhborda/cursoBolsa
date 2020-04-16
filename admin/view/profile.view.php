@@ -1,13 +1,13 @@
 <?php
 
-include 'template/sidenav.php';
+include '../template/sidenav.php';
 ?>
 
 <div class="main-content" id="panel" page="profile">
     <!-- Topnav -->
     <?php
     
-    include 'template/topnav.php';
+    include '../template/topnav.php';
     
     ?>
     <!-- Header -->

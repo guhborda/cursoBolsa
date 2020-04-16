@@ -1,16 +1,13 @@
 <?php
-header('Content-Type: application/json; charset=utf-8');
-header("Access-Control-Allow-Origin", "*");
-include '../config.php';
-include '../Conexao.class.php';
-
-
+namespace functions;
+include '../../config.php';
+include $path.'autoload.php';
+use model\User;
 
 if($_REQUEST){
     $params = $_REQUEST['data'];
     print_r($_REQUEST);
     $con = new Conexao;
-    
     $sql = "INSERT INTO clienteteste (nome,email,dataregistro) values (?,?,NOW())";
         $query = $con->query($sql,array($params['nome'],$params['email']));
         if($query){

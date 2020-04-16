@@ -1,13 +1,14 @@
 <?php
-
-include 'template/sidenav.php';
+include '../../config.php';
+if($auth){
+include '../template/sidenav.php';
 
 
 ?>
 <div class="main-content" id="panel" page="dashboard">
   <?php
   
-  include 'template/topnav.php';
+  include '../template/topnav.php';
   ?>
     <!-- Header -->
     <!-- Header -->
@@ -130,9 +131,9 @@ include 'template/sidenav.php';
         <!-- sales volume -->
         <!-- totalorders -->
         <?php
-          include 'components/salesvalue.php';
+          include '../components/salesvalue.php';
           
-          include 'components/totalorders.php';
+          include '../components/totalorders.php';
         ?>
         
       </div>
@@ -141,10 +142,10 @@ include 'template/sidenav.php';
         <!-- todolist -->
         <!-- progress track -->
         <?php
-          include 'components/teammembers.php';
+          include '../components/teammembers.php';
           
-          include 'components/todolist.php';
-          include 'components/progresstrack.php';
+          include '../components/todolist.php';
+          include '../components/progresstrack.php';
 
         ?>
       </div>
@@ -152,7 +153,7 @@ include 'template/sidenav.php';
        <!-- activity feed -->
         <!-- light table -->
         <?php
-          include 'components/lighttable.php';
+          include '../components/lighttable.php';
         
 
         ?>
@@ -165,3 +166,8 @@ include 'template/sidenav.php';
       
 
 
+<?php
+}else{
+  echo "<script>$('.master_section').load('view/login.view.php');</script>";
+}
+?>

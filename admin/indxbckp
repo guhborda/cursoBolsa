@@ -1,8 +1,4 @@
 <?php
-include 'config.php';
-include 'structure/head.php';
-?>
-<?php
 if($_REQUEST){
     $url = explode('/',$_REQUEST['url']);
     if( $_REQUEST['url'] != '' && $_REQUEST['url'] != '/'){
@@ -18,13 +14,22 @@ if($_REQUEST){
 
     }
 }else{
-    include 'pages/home.view.php';
+    include 'pages/dashboard.view.php';
 }
 
 ?>
 
-    <script src="sw.js"></script>
+<script>
+$('.sidenav-toggler').on('click',function(e){
+        e.preventDefault();
+        
 
+        $('#sidenav-main').toggleClass('show');
 
+    });
+</script>
+<?php
+    include 'structure/footer.php';
+?>
 </body>
 </html>

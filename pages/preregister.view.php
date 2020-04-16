@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin", "*");
+
     //include 'structure/navbar.php';
   ?>
 <div class="main-content bg-default" page="preregister" style="margin-left:0;">
@@ -46,7 +46,7 @@ header("Access-Control-Allow-Origin", "*");
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="fas fa-signature"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Nome e Sobrenome" type="text" id="nome">
+                    <input class="form-control" placeholder="Nome e Sobrenome" type="text" id="nome" name="nome">
                   </div>
                 </div>
                 <div class="form-group">
@@ -54,7 +54,7 @@ header("Access-Control-Allow-Origin", "*");
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                     </div>
-                    <input class="form-control" placeholder="E-mail" type="email" id="email">
+                    <input class="form-control" placeholder="E-mail" type="email" id="email" name="email">
                   </div>
                 </div>
                 
@@ -73,6 +73,27 @@ header("Access-Control-Allow-Origin", "*");
   </div>
 
 
+ 
+
+
+  <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <style>
     .header{
@@ -98,28 +119,33 @@ include 'structure/footer.php';
 $('#preregister').submit(function(e){
 
         e.preventDefault();
-
+        var form = 'cadInteresse';
         var nome = $('#nome').val();
         var email = $('#email').val();
         if( (nome != '') || (email != '')){
           $.ajax({
-            headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    },
-          url: 'functions/inscrever.php',
-          dataType:'JSON',
-          method: "POST",
-          data: {data:{nome,email}},
-          beforeSend: function(){
-            console.log('sending');
-          },
-          success: function(response){
-                      if(response.dados == true){
-                          console.log('cadastrado com Sucesso');
-                      }else{
-                        console.log(response);
-                      }
-                  }
+					 	method:'POST',
+					  	url:'functions/cadInteresse.func.php',
+					  	dataType:'JSON',
+					 	data:{ 
+					 		nome: nome,email: email,form: form
+						},
+						
+						success: function(response){
+							if(response.success == true){
+                $('.modal .modal-title').empty();
+                $('.modal .modal-body').empty();
+                $('.modal .modal-title').html('Sucesso!');
+                $('.modal .modal-body').html('Cadastrado com Sucesso!');
+                $('.modal').modal();
+							  }else{
+                  $('.modal .modal-title').empty();
+                $('.modal .modal-body').empty();
+                $('.modal .modal-title').html('Erro!');
+                $('.modal .modal-body').html('Infelizmente ocorreu um erro, tente novamente mais tarde!');
+                $('.modal').modal();
+                }
+              }
           });
         }else{
 

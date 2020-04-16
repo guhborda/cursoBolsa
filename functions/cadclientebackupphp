@@ -1,0 +1,57 @@
+<?php
+namespace functions;
+include ('../autoload.php');
+use model\Clientes;
+include('../config.php');
+if(isset($_POST)){
+    $response = array("success"=>false);
+    
+    // $nome,$razao,$endereco,$cidade,$estado,$telefone,$cep,$cpfj,$nascimento;
+    $nome = $_POST['nome'];
+    $razao = $_POST['razao'];
+    $endereco = $_POST['endereco'];
+    $cidade = $_POST['cidade'];
+    $estado = $_POST['estado'];
+    $telefone = $_POST['telefone'];
+    $cep = $_POST['cep'];
+    $cpfj = $_POST['cpfj'];
+    $nascimento = $_POST['nascimento'];
+    $data = array('nome'=>$nome,'razao'=>$razao,'endereco'=>$endereco,'cidade'=>$cidade,'estado'=>$estado,'telefone'=>$telefone,'cep'=>$cep,'cpfj'=>$cpfj,'nascimento'=>$nascimento);
+    //echo json_encode($data);
+
+    function set($cliente,$data){
+        $cliente->setNome($data['nome']);
+        $cliente->setRazao($data['razao']);
+        $cliente->setEndereco($data['endereco']);
+        $cliente->setCidade($data['cidade']);
+        $cliente->setEstado($data['estado']);
+        $cliente->setTelefone($data['telefone']);
+        $cliente->setCep($data['cep']);
+        $cliente->setCpfj($data['cpfj']);
+        $cliente->setNascimento($data['nascimento']);
+        return true;
+    }
+    $cliente = new Clientes;
+    $executeCad = set($cliente,$data);
+    if($executeCad == true){
+        // print_r($cliente->getNome());
+        // print_r($cliente->getTelefone());
+
+        $log = $cliente->cadCliente();
+
+         if($log==true){
+             
+           $response = array("success" => true);
+           die(json_encode($response));
+          }else{
+             die(json_encode($response));
+          }
+    }else{
+        echo 'erro não foi possivel';
+    }
+      //$getLogin = array($user->getUsername(),$user->getSenha());
+        
+}
+
+
+?>
