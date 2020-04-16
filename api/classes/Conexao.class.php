@@ -1,4 +1,5 @@
 <?php 
+header("Access-Control-Allow-Origin", "*");
 define('HOST','localhost');
 define('DBNAME','u304196802_preregistro');
 define('DBUSER','u304196802_mentoria');

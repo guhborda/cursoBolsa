@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin", "*");
     //include 'structure/navbar.php';
   ?>
 <div class="main-content bg-default" page="preregister" style="margin-left:0;">
@@ -102,7 +103,10 @@ $('#preregister').submit(function(e){
         var email = $('#email').val();
         if( (nome != '') || (email != '')){
           $.ajax({
-          url: 'api/Preregistro/cadastrar',
+            headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    },
+          url: 'functions/inscrever.php',
           dataType:'JSON',
           method: "POST",
           data: {data:{nome,email}},

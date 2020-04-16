@@ -16,8 +16,8 @@ class Conexao{
 		$dns = "mysql:host=".HOST.";dbname=".DBNAME;
 		
 		try{
-			$this->pdo = new \PDO($dns,DBUSER,DBPASS);
-			$this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+			$this->pdo = new PDO($dns,DBUSER,DBPASS);
+			$this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			$this->pdo->exec("set names utf8");
 			return $this->pdo;
 			
@@ -26,7 +26,7 @@ class Conexao{
 			return $this->error;
 		}
 	}
-	public function query($sql,$params = null){
+	public function query($sql,$params = array(null)){
 		try{
 			$this->stmt = $this->pdo->prepare($sql);
 			$this->stmt->execute($params);

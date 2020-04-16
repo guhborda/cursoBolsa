@@ -78,7 +78,7 @@
               <button type="button" class="btn btn-primary ">Start free trial</button>
               </div>
             </div>
-            <div class="card card-pricing bg-gradient-success zoom-in shadow-lg rounded border-0 text-center mb-4">
+            <div class="card card-pricing bg-gradient-success zoom-in shadow-lg rounded border-0 text-center mb-4" style="transform: scale(1.1);">
               <div class="card-header bg-transparent">
               <div class="icon icon-xs icon-shape bg-white shadow " style="width:50px; height:50px">
                 <i class="fas fa-space-shuttle" style="transform: rotateZ(-28deg);

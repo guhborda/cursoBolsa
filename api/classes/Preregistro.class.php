@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin", "*");
     include 'classes/Conexao.class.php';
 	class Preregistro
 	{
