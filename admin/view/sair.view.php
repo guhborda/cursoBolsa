@@ -3,7 +3,7 @@
 include '../functions/sair.func.php';
 
     if($response['Error'] == ''){
-        header('location: ../index.php');
+        echo "<script>$(location).attr('href','index.php');</script>";
     }
 
 ?>

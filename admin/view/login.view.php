@@ -1,7 +1,7 @@
 <?php
-include ('../../config.php');
+
+include '../../config.php';
 if($auth == false){
-	include '../template/navbar.php';
 ?>
 <div class="main-content bg-default">
     <!-- Header -->
@@ -31,7 +31,11 @@ if($auth == false){
               <div class="text-muted text-center mt-2 mb-3"><small>Sign in with</small></div>
               <div class="btn-wrapper text-center">
                 <a href="#" class="btn btn-neutral btn-icon">
-                  <span class="btn-inner--icon"><i class="fab fa-google" ></i></span>
+                  <span class="btn-inner--icon"><img src="../assets/img/icons/common/github.svg"></span>
+                  <span class="btn-inner--text">Github</span>
+                </a>
+                <a href="#" class="btn btn-neutral btn-icon">
+                  <span class="btn-inner--icon"><img src="../assets/img/icons/common/google.svg"></span>
                   <span class="btn-inner--text">Google</span>
                 </a>
               </div>
@@ -58,13 +62,13 @@ if($auth == false){
                   </div>
                 </div>
                 <div class="custom-control custom-control-alternative custom-checkbox">
-                  <input class="custom-control-input" id=" customCheckLogin" type="checkbox" value='1'>
+                  <input class="custom-control-input" id=" customCheckLogin" type="checkbox" name="remember">
                   <label class="custom-control-label" for=" customCheckLogin">
                     <span class="text-muted">Remember me</span>
                   </label>
                 </div>
                 <div class="text-center">
-                  <input  class="btn btn-primary my-4" type="submit" value="Login" />
+                  <input type="submit" class="btn btn-primary my-4" type="submit" value="Login" />
                 </div>
               </form>
             </div>
@@ -81,20 +85,22 @@ if($auth == false){
       </div>
     </div>
   </div>
-  <script>
+<script>
 function sleep (time) {
   return new Promise((resolve) => setTimeout(resolve, time));
 }
-
+$(document).ready(function(){
   $('#login').submit(function(e){
 	e.preventDefault();
   		console.log('logando');
 		var username = $('input[type="email"]').val();
     var password = $('input[type="password"]').val();
-    var remember = $('input[type="checkbox"].checked').val();
+    var remember = $('input[type="checkbox"]:checked').val();
+    
 		var form = 'logar';
 		if(username == '' && password == ''){
-			alert('Nenhum campo pode ser vazio!');
+			$('.login__input').css({'border': '1px solid #00b388'});
+			$('.login__input').css({'border': '1px solid red'});
 		}else if(username == '')
 			{
 				$('#username, #password').css({'border': '1px solid #00b388'});
@@ -111,19 +117,19 @@ function sleep (time) {
 				
 				$.ajax({
 					 	method:'POST',
-					  	url:'functions/Login.func.php',
+					  	url:'../functions/Login.func.php',
 					  	dataType:'JSON',
 					 	data:{ 
 					 		username: username,
                 password: password,
-                remember:remember,
+                remember: remember,
 					  		form: form
 						},
 						
 						success: function(response){
 							if(response.success == true){
-                // $(location).attr('href','admin/index.php');
                 console.log(response);
+								// $(location).attr('href','index.php');
 							}else{
 								$('.username, .senha').css({'border': '1px solid #00b388'});
 									$('.username, .senha').css({'border': '1px solid red'});
@@ -143,10 +149,10 @@ function sleep (time) {
 			}
 		return false;
 	});
-  <?php
-}else{?>
-	$(location).attr('href','admin/index.php');
+});
+</script>
 <?php
+}else{
+	echo "<script>$('.master_section').load('view/dashboard.view.php');</script>";
 }
 ?>
-</script>

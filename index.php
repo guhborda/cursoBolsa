@@ -14,11 +14,11 @@ if($_REQUEST){
             include 'pages/'.$_REQUEST['url'].'.view.php';
         }
     }else{
-        include 'pages/home.view.php';
+        include 'pages/pricing.view.php';
 
     }
 }else{
-    include 'pages/home.view.php';
+    include 'pages/pricing.view.php';
 }
 
 ?>
