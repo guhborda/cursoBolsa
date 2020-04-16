@@ -1,6 +1,9 @@
 <?php
-    include 'structure/navbar.php';
-  ?>
+
+include '../../config.php';
+if($auth == false){
+	include '../../structure/navbar.php';
+?>
 <div class="main-content bg-default">
     <!-- Header -->
     <div class="header bg-gradient-primary py-7 py-lg-8 pt-lg-9">
@@ -29,7 +32,11 @@
               <div class="text-muted text-center mt-2 mb-3"><small>Sign in with</small></div>
               <div class="btn-wrapper text-center">
                 <a href="#" class="btn btn-neutral btn-icon">
-                  <span class="btn-inner--icon"><i class="fab fa-google" ></i></span>
+                  <span class="btn-inner--icon"><img src="../assets/img/icons/common/github.svg"></span>
+                  <span class="btn-inner--text">Github</span>
+                </a>
+                <a href="#" class="btn btn-neutral btn-icon">
+                  <span class="btn-inner--icon"><img src="../assets/img/icons/common/google.svg"></span>
                   <span class="btn-inner--text">Google</span>
                 </a>
               </div>
@@ -38,7 +45,7 @@
               <div class="text-center text-muted mb-4">
                 <small>Or sign in with credentials</small>
               </div>
-              <form role="form">
+              <form role="form" id="login">
                 <div class="form-group mb-3">
                   <div class="input-group input-group-merge input-group-alternative">
                     <div class="input-group-prepend">
@@ -62,7 +69,7 @@
                   </label>
                 </div>
                 <div class="text-center">
-                  <button type="button" class="btn btn-primary my-4">Sign in</button>
+                  <input  class="btn btn-primary my-4" type="submit" value="Login" />
                 </div>
               </form>
             </div>
@@ -79,3 +86,70 @@
       </div>
     </div>
   </div>
+<script>
+function sleep (time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+
+  $('#login').submit(function(e){
+	e.preventDefault();
+  		console.log('logando');
+		var username = $('input[type="email"]').val();
+		var password = $('input[type="password"]').val();
+		var form = 'logar';
+		if(username == '' && password == ''){
+			alert('Nenhum campo pode ser vazio!');
+		}else if(username == '')
+			{
+				$('#username, #password').css({'border': '1px solid #00b388'});
+				
+				
+			}else if(password == ''){
+				
+				$('.username, .senha').css({'border': '1px solid #00b388'});
+
+        $('.senha').css({'border': '1px solid red'});
+        
+			}else{
+				$('.username, .senha').css({'border': '1px solid #00b388'});
+				$('.loading').html('<div class="load-wrapp"><div class="load-3"><div class="line"></div><div class="line"></div><div class="line"></div></div></div>');
+				
+				$.ajax({
+					 	method:'POST',
+					  	url:'../functions/Login.func.php',
+					  	dataType:'JSON',
+					 	data:{ 
+					 		username: username,
+					  		password: password,
+					  		form: form
+						},
+						
+						success: function(response){
+							if(response.success == true){
+								$(location).attr('href','index.php');
+							}else{
+								$('.username, .senha').css({'border': '1px solid #00b388'});
+									$('.username, .senha').css({'border': '1px solid red'});
+									$('.username .input-group-addon,.senha .input-group-addon').css({'color': 'red'});
+								sleep(0).then(()=>{
+									$('.loading').html('<div class="alert alert-danger"> Usuário ou senha incorretos</div>');
+								});
+								sleep(1500).then(() => {
+									$('.loading').html('LOGIN');
+								});
+								
+							}
+						}
+			
+					});
+				
+			}
+		
+	});
+
+</script>
+<?php
+}else{
+	echo "<script>$('.master_section').load('view/dashboard.view.php');</script>";
+}
+?>

@@ -24,17 +24,17 @@
         </div>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a href="home" class="nav-link">
+            <a href="../home" class="nav-link">
               <span class="nav-link-inner--text">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="pricing" class="nav-link">
+            <a href="../pricing" class="nav-link">
               <span class="nav-link-inner--text">Pricing</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="lock" class="nav-link">
+            <a href="../lock" class="nav-link">
               <span class="nav-link-inner--text">lock</span>
             </a>
           </li>
@@ -76,7 +76,7 @@
             </a>
           </li>
           <li class="nav-item d-none d-lg-block ml-lg-4">
-            <a href="admin/login"  class="btn btn-neutral btn-icon">
+            <a href="login" class="btn btn-neutral btn-icon">
               <span class="btn-inner--icon">
                 <i class="fab fa fa-shopping-cart mr-2"></i>
               </span>

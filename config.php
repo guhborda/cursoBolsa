@@ -6,7 +6,9 @@ $dirname='/'.'cursoBolsa/';
 $path = $path.$dirname;
 $auth = false;
 if(isset($_SESSION['user'])){
+
     $auth = true;
+    $sessao= $_SESSION['user'];
 }else{
     $auth = false;
 }

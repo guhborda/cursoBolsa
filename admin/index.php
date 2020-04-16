@@ -10,7 +10,7 @@ include ('structure/head.php');
 
 <?php 
     if(isset($_SESSION['user'])){ 
-
+        
         if(isset($_GET['url'])){
             
             $url= $_GET['url'];

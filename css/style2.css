@@ -1,3 +1,8 @@
+
+.main-content[id='panel'] > body{
+  background-color: #f8f9fe;
+}
+
 .main-content{
     max-width: 1920px;
     position: relative;

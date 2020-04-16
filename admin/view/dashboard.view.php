@@ -3,7 +3,8 @@ include '../../config.php';
 if($auth){
 include '../template/sidenav.php';
 
-
+// var_dump($_SESSION['user']);
+// print_r($sessao['email']);
 ?>
 <div class="main-content" id="panel" page="dashboard">
   <?php
