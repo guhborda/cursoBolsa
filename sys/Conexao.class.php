@@ -1,9 +1,9 @@
 <?php 
 namespace sys;
 define('HOST','localhost');
-define('DBNAME','testes');
-define('DBUSER','root');
-define('DBPASS','');
+define('DBNAME','u304196802_preregistro');
+define('DBUSER','u304196802_mentoria');
+define('DBPASS','Xmsoltqdf31');
 define('DBTYPE','mysql');
 /**
 * 

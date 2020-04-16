@@ -1,7 +1,7 @@
 <?php  
 namespace functions;
-include '../config.php';
-include $path.'autoload.php';
+include '../../config.php';
+include $path.'./autoload.php';
 
 use model\User;
 	
@@ -12,10 +12,6 @@ use model\User;
 		$username = $_POST['username'];
 		$senha = $_POST['password'];
 		$array = array($username,$senha);	
-		if(!empty($_POST["remember"])) {
-			setcookie ("member_login",$array,time()+ (10 * 365 * 24 * 60 * 60));
-		} 
-		
 		function set($user,$array){
 			$user->setUsername($array[0]);
 			$user->setSenha($array[1]);
@@ -30,7 +26,7 @@ use model\User;
 			if($result == 1){
 				$sessao = $log->fetch(\PDO::FETCH_ASSOC);
 				$_SESSION['user'] = $sessao;
-				$response = array("success" => true, "user" => $_SESSION['user'], "cookie" => $_COOKIE['member_login']);
+				$response = array("success" => true, "user" => $_SESSION['user']);
 				
 				die(json_encode($response));		
 			}else{

@@ -117,7 +117,7 @@ $(document).ready(function(){
 				
 				$.ajax({
 					 	method:'POST',
-					  	url:'../functions/Login.func.php',
+					  	url:'functions/Login.func.php',
 					  	dataType:'JSON',
 					 	data:{ 
 					 		username: username,
@@ -129,7 +129,7 @@ $(document).ready(function(){
 						success: function(response){
 							if(response.success == true){
                 console.log(response);
-								// $(location).attr('href','index.php');
+								 $(location).attr('href','index.php');
 							}else{
 								$('.username, .senha').css({'border': '1px solid #00b388'});
 									$('.username, .senha').css({'border': '1px solid red'});
